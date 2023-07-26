@@ -1,0 +1,6 @@
+# 代理补充列表
+
+# MyList && Other
+DOMAIN-SUFFIX,dahaoshen.com
+DOMAIN-SUFFIX,weightyware.com
+IP-CIDR,10.102.1.0/24,no-resolve
