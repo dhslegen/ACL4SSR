@@ -5,3 +5,4 @@ DOMAIN-SUFFIX,dahaoshen.com
 DOMAIN-SUFFIX,weightyware.com
 IP-CIDR,10.102.1.0/24,no-resolve
 DOMAIN-SUFFIX,zhaosongjiang.com
+IP-CIDR,172.93.44.241/32
