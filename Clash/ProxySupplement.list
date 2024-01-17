@@ -50,3 +50,4 @@ DOMAIN-SUFFIX,mageddo.com
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,bulianglin.com
 DOMAIN-KEYWORD,whatismyipaddress
+IP-CIDR,117.177.248.17/32
