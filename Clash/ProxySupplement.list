@@ -51,3 +51,5 @@ DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,bulianglin.com
 DOMAIN-KEYWORD,whatismyipaddress
 IP-CIDR,20.205.243.166/32
+DOMAIN-SUFFIX,activiti.org
+DOMAIN-SUFFIX,flowable.com
