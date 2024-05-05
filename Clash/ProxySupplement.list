@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,istockphoto.com
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,torrentmac.net
 DOMAIN-SUFFIX,yarnpkg.com
-DOMAIN-SUFFIX,jetbrains.com
+# DOMAIN-SUFFIX,jetbrains.com
 DOMAIN-SUFFIX,sstatic.net
 DOMAIN-SUFFIX,grazie.ai
 DOMAIN-SUFFIX,rutracker.org
