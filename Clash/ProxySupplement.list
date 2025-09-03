@@ -48,6 +48,7 @@ DOMAIN-SUFFIX,czzy88.com
 DOMAIN-SUFFIX,kkzybf.com
 DOMAIN-SUFFIX,mageddo.com
 DOMAIN-SUFFIX,docker.io
+DOMAIN-KEYWORD,docker
 DOMAIN-SUFFIX,bulianglin.com
 DOMAIN-KEYWORD,whatismyipaddress
 IP-CIDR,20.205.243.166/32
