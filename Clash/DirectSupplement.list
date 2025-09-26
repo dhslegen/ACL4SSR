@@ -2,6 +2,7 @@
 
 # MyList && Other
 DOMAIN-SUFFIX,dahaoshen.com
+DOMAIN-SUFFIX,zhaosongjiang.com
 DOMAIN-SUFFIX,weightyware.com
 IP-CIDR,10.102.1.0/24
 IP-CIDR,10.100.1.0/24
@@ -16,7 +17,6 @@ IP-CIDR,172.93.44.241/32
 IP-CIDR,172.93.41.97/32
 IP-CIDR,fc00::/7
 IP-CIDR,fe80::/10
-DOMAIN-SUFFIX,zhaosongjiang.com
 DOMAIN-KEYWORD,local
 DOMAIN-KEYWORD,btsow
 DOMAIN,localhost
