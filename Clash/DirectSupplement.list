@@ -33,3 +33,7 @@ DOMAIN,gate.lagou.com
 DOMAIN,www.abchina.com.cn
 DOMAIN,login-service.mobile-bank.psbc.com
 DOMAIN,mobile-bank.psbc.com
+# 补充网段（来自 VPN route）
+IP-CIDR,52.93.86.0/24
+IP-CIDR,52.81.201.0/24
+IP-CIDR,192.168.60.0/24
