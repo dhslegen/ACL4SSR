@@ -32202,7 +32202,8 @@ DOMAIN-SUFFIX,statscollector.sd-rtn.com
 DOMAIN-SUFFIX,statse-omtrdc.deka.de
 DOMAIN-SUFFIX,statse.deka-etf.de
 DOMAIN-SUFFIX,statsegg.cdngeek.com
-DOMAIN-SUFFIX,statsig.anthropic.com
+# 防止anthropic报错
+# DOMAIN-SUFFIX,statsig.anthropic.com
 DOMAIN-SUFFIX,statsjs.klevu.com
 DOMAIN-SUFFIX,statsmp2.emol.com
 DOMAIN-SUFFIX,statss.smartdestinations.com
