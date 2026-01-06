@@ -1,0 +1,39 @@
+# 直连补充列表
+
+# MyList && Other
+DOMAIN-SUFFIX,dahaoshen.com
+DOMAIN-SUFFIX,zhaosongjiang.com
+DOMAIN-SUFFIX,weightyware.com
+IP-CIDR,10.102.1.0/24
+IP-CIDR,10.100.1.0/24
+IP-CIDR,10.0.0.0/8
+IP-CIDR,13.8.0.0/16
+IP-CIDR,100.64.0.0/10
+IP-CIDR,169.254.0.0/16
+IP-CIDR,172.16.0.0/12
+IP-CIDR,192.0.0.0/24
+IP-CIDR,192.168.0.0/16
+IP-CIDR,172.93.44.241/32
+IP-CIDR,172.93.41.97/32
+IP-CIDR,fc00::/7
+IP-CIDR,fe80::/10
+DOMAIN-KEYWORD,local
+DOMAIN-KEYWORD,btsow
+DOMAIN,localhost
+DOMAIN-SUFFIX,local
+DOMAIN,sequoia.apple.com
+DOMAIN,seed-sequoia.siri.apple.com
+DOMAIN,captive.apple.com
+DOMAIN,e.crashlytics.com
+DOMAIN,www.baidu.com
+DOMAIN,passenger.t3go.cn
+DOMAIN,yunbusiness.ccb.com
+DOMAIN,wxh.wo.cn
+DOMAIN,gate.lagou.com
+DOMAIN,www.abchina.com.cn
+DOMAIN,login-service.mobile-bank.psbc.com
+DOMAIN,mobile-bank.psbc.com
+# 补充网段（来自 VPN route）
+IP-CIDR,52.93.86.0/24
+IP-CIDR,52.81.201.0/24
+IP-CIDR,192.168.60.0/24
