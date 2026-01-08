@@ -37,3 +37,5 @@ DOMAIN,mobile-bank.psbc.com
 IP-CIDR,52.93.86.0/24
 IP-CIDR,52.81.201.0/24
 IP-CIDR,192.168.60.0/24
+# DOH
+DOMAIN-SUFFIX,cloudflare-dns.com
