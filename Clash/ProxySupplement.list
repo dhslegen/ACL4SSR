@@ -1,5 +1,15 @@
 # 代理补充列表
 
+# ────────── AI 工具进程规则（macOS 专用，iOS/tvOS 自动忽略）──────────
+# Anthropic / Claude
+PROCESS-NAME,Claude
+PROCESS-NAME,Claude Helper
+PROCESS-NAME,claude
+
+# OpenAI / ChatGPT
+PROCESS-NAME,ChatGPT
+PROCESS-NAME,ChatGPTHelper
+
 # MyList && Other
 DOMAIN-SUFFIX,jenkins.io
 DOMAIN-SUFFIX,sentry.io
@@ -74,14 +84,3 @@ DOMAIN-SUFFIX,vpn.capg.com.cn
 DOMAIN-SUFFIX,geojson.io
 DOMAIN-KEYWORD,sing-box
 DOMAIN-KEYWORD,diabrowser
-
-
-# ────────── AI 工具进程规则（macOS 专用，iOS/tvOS 自动忽略）──────────
-# Anthropic / Claude
-PROCESS-NAME,Claude
-PROCESS-NAME,Claude Helper
-PROCESS-NAME,claude
-
-# OpenAI / ChatGPT
-PROCESS-NAME,ChatGPT
-PROCESS-NAME,ChatGPTHelper
