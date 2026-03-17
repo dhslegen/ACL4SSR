@@ -10,6 +10,9 @@ PROCESS-NAME,claude
 PROCESS-NAME,ChatGPT
 PROCESS-NAME,ChatGPTHelper
 
+# OpenClaw
+openclaw-gateway
+
 # MyList && Other
 DOMAIN-SUFFIX,jenkins.io
 DOMAIN-SUFFIX,sentry.io
