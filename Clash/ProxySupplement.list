@@ -11,7 +11,7 @@ PROCESS-NAME,ChatGPT
 PROCESS-NAME,ChatGPTHelper
 
 # OpenClaw
-openclaw-gateway
+PROCESS-NAME,openclaw-gateway
 
 # MyList && Other
 DOMAIN-SUFFIX,jenkins.io
