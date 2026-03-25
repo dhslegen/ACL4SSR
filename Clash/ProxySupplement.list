@@ -13,6 +13,9 @@ PROCESS-NAME,ChatGPTHelper
 # OpenClaw
 PROCESS-NAME,openclaw-gateway
 
+# idea
+PROCESS-NAME,idea
+
 # MyList && Other
 DOMAIN-SUFFIX,jenkins.io
 DOMAIN-SUFFIX,sentry.io
