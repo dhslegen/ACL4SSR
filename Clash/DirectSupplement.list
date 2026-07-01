@@ -1,9 +1,5 @@
 # 直连补充列表
 
-# 进程相关
-PROCESS-NAME,Lark Helper
-PROCESS-NAME,Feishu
-
 # MyList && Other
 DOMAIN-SUFFIX,dahaoshen.com
 DOMAIN-SUFFIX,zhaosongjiang.com
