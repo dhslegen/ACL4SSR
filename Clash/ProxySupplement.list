@@ -1,11 +1,41 @@
 # 代理补充列表
 
-# ────────── AI 工具进程规则（macOS 专用，iOS/tvOS 自动忽略）──────────
-# Anthropic / Claude
+# ────────── Anthropic / Claude ──────────
+# 进程规则（macOS 专用，iOS/tvOS 自动忽略）
 PROCESS-NAME,Claude
 PROCESS-NAME,Claude Helper
 PROCESS-NAME,claude
 
+# 核心域名；anthropic.com 已覆盖 api、cdn、console、mcp 等子域名
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# CDN、认证和内容服务
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic-com.ghost.io
+
+# 监控、客服及访问统计（第三方共享服务）
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sift
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN,cdn.usefathom.com
+
+# Anthropic 地址段兜底；域名规则优先匹配
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/32,no-resolve
+
+# ────────── 其他 AI 工具进程规则（macOS 专用，iOS/tvOS 自动忽略）──────────
 # OpenAI / ChatGPT
 PROCESS-NAME,ChatGPT
 PROCESS-NAME,ChatGPTHelper
@@ -18,7 +48,6 @@ PROCESS-NAME,idea
 
 # MyList && Other
 DOMAIN-SUFFIX,jenkins.io
-DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,xmission.com
 DOMAIN-SUFFIX,freemacsoft.net
 DOMAIN-SUFFIX,npmjs.org
@@ -84,8 +113,6 @@ DOMAIN-KEYWORD,mikanani
 DOMAIN-SUFFIX,nyaa.si
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,yts.mx
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,vpn.capg.com.cn
 DOMAIN-SUFFIX,geojson.io
 DOMAIN-KEYWORD,sing-box
