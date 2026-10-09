@@ -1,0 +1,20 @@
+name: '🔗 Tailscale 自适应接入'
+desc: |-
+  在 Stash 内置 Tailscale 节点，免去 iOS 上 Tailscale 与 Stash 两个 VPN 互斥的问题。
+  依赖 Stash「自动 Tailnet 路由」：Tailnet 的 MagicDNS 后缀与各 Peer 的 IPv4/IPv6 地址
+  自动交给本节点，且优先于 rules 匹配；其余流量仍按订阅规则分流。
+  版本要求：iOS/tvOS 3.6+、macOS 4.3+（仅需节点能力时 iOS 3.4+ / macOS 4.2+）。
+  首次使用：代理列表中长按该节点 → 进入 Tailscale 页面 → 开始认证完成登录。
+author: dhslegen
+homepage: 'https://github.com/dhslegen/ACL4SSR'
+category: ACL4SSR
+
+# 覆写中的数组会插入到原配置数组前面，因此这里只追加节点，不影响订阅里的其它代理
+proxies:
+  - name: '🔗 Tailscale'
+    type: tailscale
+    # 不写 auth-key：仓库公开，且密钥受 Key Expiry 影响；交互登录后 Stash 会持久保存节点身份
+    # 省略 hostname：每台设备使用系统主机名，避免多设备在 Tailnet 中重名
+    # 省略 control-url：使用 Tailscale 官方控制服务器（自建 Headscale 时在此填写）
+    # 省略 exit-node：本节点不加入任何策略组，只承载 Tailnet 内部流量，无需出口节点
+    # auto-route-disabled 保持默认 false，开启自动 Tailnet 路由即「自适应」的核心
