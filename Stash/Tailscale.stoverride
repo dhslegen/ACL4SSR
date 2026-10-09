@@ -3,7 +3,7 @@ desc: |-
   在 Stash 内置 Tailscale 节点，免去 iOS 上 Tailscale 与 Stash 两个 VPN 互斥的问题。
   依赖 Stash「自动 Tailnet 路由」：Tailnet 的 MagicDNS 后缀与各 Peer 的 IPv4/IPv6 地址
   自动交给本节点，且优先于 rules 匹配；其余流量仍按订阅规则分流。
-  版本要求：iOS/tvOS 3.6+、macOS 4.3+（仅需节点能力时 iOS 3.4+ / macOS 4.2+）。
+  版本要求：iOS/tvOS 3.4+、macOS 4.2+；低于 iOS 3.6 / macOS 4.3 时由本覆写的显式规则代替自动路由。
   首次使用：策略组列表最上方的「🔗 Tailscale」组中长按 Tailscale 节点 → 进入 Tailscale 页面 → 开始认证完成登录。
 author: dhslegen
 homepage: 'https://github.com/dhslegen/ACL4SSR'
@@ -26,3 +26,13 @@ proxy-groups:
     type: select
     proxies:
       - Tailscale
+
+# 显式规则兜底：自动 Tailnet 路由需 iOS 3.6+ / macOS 4.3+，旧版本只能靠规则把 Tailnet 流量交给节点
+# 覆写规则插入原规则之前，优先于 DirectSupplement / LocalAreaNetwork 中 100.64.0.0/10 的直连规则
+# 新版本中自动路由先于 rules 匹配，以下规则不会冲突
+rules:
+  # MagicDNS 域名（推荐用域名访问，fake-ip 地址必然进入 TUN，不受「跳过路由」影响）
+  - DOMAIN-SUFFIX,ts.net,🔗 Tailscale
+  # Tailscale IPv4 / IPv6 地址段；按 IP 访问还需在 Stash 设置的「跳过路由」中移除 100.64.0.0/10
+  - IP-CIDR,100.64.0.0/10,🔗 Tailscale,no-resolve
+  - IP-CIDR6,fd7a:115c:a1e0::/48,🔗 Tailscale,no-resolve
