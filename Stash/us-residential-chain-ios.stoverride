@@ -1,0 +1,137 @@
+# Stash iOS 3.6.5 兼容版：导入后在手机本地填写住宅凭据。
+# 将 REPLACE_WITH_RESIDENTIAL_USERNAME 与 REPLACE_WITH_RESIDENTIAL_PASSWORD 全部替换。
+# 用户名填写原始用户名，不包含 user- 前缀或 -ip- 定位参数。
+name: 固定住宅 IP 链路（iOS 3.6.5）
+desc: |-
+  适用于 Stash iOS 3.6.5，搭配本仓库 ACL4SSR Online 系列订阅。
+  依赖当前订阅中已有的 mini 节点，通过 mini 连接 Decodo 固定住宅 IP。
+  导入公开模板后，在手机本地将两种住宅账号密码占位符全部替换，再启用。
+  住宅节点使用 HTTP/TLS 并拦截 QUIC；AI 仅引用住宅组，默认出口 48.46.148.179。
+  住宅组手动选择固定 IP，不自动降级至机房或直连。
+  iOS 不支持按进程分流；这里保留订阅的域名分流，去掉 Mac 进程规则。
+proxies:
+- name: "\U0001F3E0 住宅 216.133.163.52"
+  type: http
+  server: isp.decodo.com
+  port: 10001
+  username: user-REPLACE_WITH_RESIDENTIAL_USERNAME-ip-216.133.163.52
+  password: REPLACE_WITH_RESIDENTIAL_PASSWORD
+  dialer-proxy: mini
+  tls: true
+  block-quic: 'on'
+- name: "\U0001F3E0 住宅 48.46.148.179"
+  type: http
+  server: isp.decodo.com
+  port: 10001
+  username: user-REPLACE_WITH_RESIDENTIAL_USERNAME-ip-48.46.148.179
+  password: REPLACE_WITH_RESIDENTIAL_PASSWORD
+  dialer-proxy: mini
+  tls: true
+  block-quic: 'on'
+- name: "\U0001F3E0 住宅 85.189.210.230"
+  type: http
+  server: isp.decodo.com
+  port: 10001
+  username: user-REPLACE_WITH_RESIDENTIAL_USERNAME-ip-85.189.210.230
+  password: REPLACE_WITH_RESIDENTIAL_PASSWORD
+  dialer-proxy: mini
+  tls: true
+  block-quic: 'on'
+# 完整替换 ACL4SSR 策略组；保留原订阅 proxies 中的 mini 机房节点。
+proxy-groups: #!replace
+- name: "\U0001F680 节点选择"
+  type: select
+  proxies:
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+  - "\U0001F3E0 住宅 216.133.163.52"
+  - "\U0001F3E0 住宅 48.46.148.179"
+  - "\U0001F3E0 住宅 85.189.210.230"
+  - mini
+  - DIRECT
+- name: "\U0001F3E0 住宅代理"
+  type: select
+  proxies:
+  - "\U0001F3E0 住宅 48.46.148.179"
+  - "\U0001F3E0 住宅 216.133.163.52"
+  - "\U0001F3E0 住宅 85.189.210.230"
+- name: "\U0001F3E2 机房代理"
+  type: select
+  proxies:
+  - mini
+- name: "\U0001F4AC Ai平台"
+  type: select
+  proxies:
+  - "\U0001F3E0 住宅代理"
+- name: "\U0001F30D 国外媒体"
+  type: select
+  proxies:
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F4F2 电报信息"
+  type: select
+  proxies:
+  - "\U0001F680 节点选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F34E 苹果服务"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F4E2 谷歌FCM"
+  type: select
+  proxies:
+  - "\U0001F680 节点选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F30F 国内媒体"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F4FA 哔哩哔哩"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
+- name: "\U0001F3AF 全球直连"
+  type: select
+  proxies:
+  - DIRECT
+  - "\U0001F680 节点选择"
+  - "\U0001F3E0 住宅代理"
+- name: "\U0001F6D1 全球拦截"
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: "\U0001F343 应用净化"
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: "\U0001F41F 漏网之鱼"
+  type: select
+  proxies:
+  - "\U0001F680 节点选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F3E0 住宅代理"
+  - "\U0001F3E2 机房代理"
