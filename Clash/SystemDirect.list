@@ -7,6 +7,10 @@ DOMAIN,swscan.apple.com
 DOMAIN,swdist.apple.com
 DOMAIN,mesu.apple.com
 DOMAIN,gdmf.apple.com
+# 系统资源目录（mobileassetd，2026-10-25 复盘批准）
+DOMAIN,gdmf-ados.apple.com
+# 证书吊销检查（trustd，2026-10-25 复盘批准）
+DOMAIN,ocsp2.apple.com
 DOMAIN,appldnld.apple.com
 DOMAIN,updates.cdn-apple.com
 DOMAIN,oscdn.apple.com

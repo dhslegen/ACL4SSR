@@ -14,6 +14,14 @@ DOMAIN-SUFFIX,pypi.org
 DOMAIN-SUFFIX,pythonhosted.org
 DOMAIN-SUFFIX,docker.io
 
+# ────────── 桌面工具（2026-10-25 复盘批准）──────────
+# Typora 更新包
+DOMAIN-SUFFIX,typora.io
+# iStat Menus 查询公网 IP
+DOMAIN-SUFFIX,istatmenus.app
+# Jump Desktop 远程中继长连接
+DOMAIN-SUFFIX,jumpdesktop.com
+
 # ────────── DNS（本地覆写的 DoH 服务器，开了 follow-rule，避免 DNS 查询落到兜底）──────────
 IP-CIDR,1.1.1.1/32,no-resolve
 IP-CIDR,1.0.0.1/32,no-resolve
