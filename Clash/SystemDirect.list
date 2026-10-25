@@ -13,6 +13,9 @@ DOMAIN,oscdn.apple.com
 DOMAIN,osxapps.itunes.apple.com
 DOMAIN,iosapps.itunes.apple.com
 
+# ────────── Apple 推送（apsd 常驻长连接，443 / 5223 端口）──────────
+DOMAIN-SUFFIX,push.apple.com
+
 # ────────── iCloud 同步 ──────────
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
