@@ -1,0 +1,39 @@
+# 保守分流直连列表（Conservative.ini 专用；旧配置 ACL4SSR_Online.ini 继续使用 DirectSupplement.list）
+# 原则：只放明确需要直连的条目，未收录的一律走兜底
+
+# ────────── 公司域名 ──────────
+DOMAIN-SUFFIX,dahaoshen.com
+DOMAIN-SUFFIX,zhaosongjiang.com
+DOMAIN-SUFFIX,weightyware.com
+
+# ────────── 本地名称 ──────────
+DOMAIN-SUFFIX,local
+DOMAIN,localhost
+DOMAIN,captive.apple.com
+
+# ────────── 国内银行与出行 ──────────
+DOMAIN,www.baidu.com
+DOMAIN,passenger.t3go.cn
+DOMAIN,yunbusiness.ccb.com
+DOMAIN,wxh.wo.cn
+DOMAIN,gate.lagou.com
+DOMAIN,www.abchina.com.cn
+DOMAIN,login-service.mobile-bank.psbc.com
+DOMAIN,mobile-bank.psbc.com
+
+# ────────── 私网段 ──────────
+# ⚠️ 故意不加 no-resolve，请勿补上：
+# 公司内网有些主机名不在 dahaoshen.com 下，但会解析到 10.x 等私网地址，
+# 必须先解析一次才能命中这些规则走直连；加了 no-resolve 这些主机就会落到兜底
+IP-CIDR,10.0.0.0/8
+IP-CIDR,172.16.0.0/12
+IP-CIDR,192.168.0.0/16
+IP-CIDR,169.254.0.0/16
+IP-CIDR,100.64.0.0/10
+IP-CIDR6,fc00::/7
+IP-CIDR6,fe80::/10
+
+# ────────── 搬瓦工节点 IP ──────────
+# 代理服务器本身必须直连，否则代理连不上
+IP-CIDR,172.93.44.241/32,no-resolve
+IP-CIDR,172.93.41.97/32,no-resolve
