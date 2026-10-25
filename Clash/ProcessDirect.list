@@ -1,0 +1,12 @@
+# 信任进程直连列表（保守分流 Conservative.ini 使用，仅 macOS 生效，iOS 自动忽略）
+# 按 App 包路径前缀匹配，路径末尾必须带 /，避免误匹配同名前缀的其它 App
+PROCESS-NAME,/Applications/Lark.app/
+PROCESS-NAME,/Applications/WeChat.app/
+PROCESS-NAME,/Applications/wpsoffice.app/
+PROCESS-NAME,/Applications/TencentMeeting.app/
+PROCESS-NAME,/Applications/WeRead.app/
+PROCESS-NAME,/Applications/Tencent Lemon.app/
+PROCESS-NAME,/Applications/AweSun.app/
+PROCESS-NAME,/Applications/ToDesk.app/
+PROCESS-NAME,/Applications/UURemote.app/
+PROCESS-NAME,/Applications/极空间.app/

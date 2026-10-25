@@ -1,0 +1,15 @@
+# 国外白名单（保守分流 Conservative.ini 使用，走搬瓦工）
+# 只放明确和 AI 无关的开发类大流量站点；宁可少放，按流量周报经用户批准后逐步追加
+# 注意：Copilot 等 AI 子域名由排在前面的 AI 规则先命中，不会落到这里
+
+# ────────── GitHub ──────────
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,ghcr.io
+
+# ────────── 包管理器 ──────────
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,pythonhosted.org
+DOMAIN-SUFFIX,docker.io

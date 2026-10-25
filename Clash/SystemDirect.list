@@ -1,0 +1,27 @@
+# 系统服务列表（保守分流 Conservative.ini 使用）
+# 只放 Apple、Microsoft 官方更新与同步域名；bing、copilot、Siri 等和 AI 沾边的一律不放
+
+# ────────── Apple 系统与 App 更新 ──────────
+DOMAIN,swcdn.apple.com
+DOMAIN,swscan.apple.com
+DOMAIN,swdist.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN,appldnld.apple.com
+DOMAIN,updates.cdn-apple.com
+DOMAIN,oscdn.apple.com
+DOMAIN,osxapps.itunes.apple.com
+DOMAIN,iosapps.itunes.apple.com
+
+# ────────── iCloud 同步 ──────────
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+
+# ────────── Microsoft 系统与 Office 更新 ──────────
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,update.microsoft.com
+DOMAIN-SUFFIX,delivery.mp.microsoft.com
+DOMAIN-SUFFIX,officecdn.microsoft.com
+DOMAIN-SUFFIX,officecdn.microsoft.com.edgesuite.net
+DOMAIN,officecdn-microsoft-com.akamaized.net
