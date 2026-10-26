@@ -21,6 +21,12 @@ DOMAIN,www.abchina.com.cn
 DOMAIN,login-service.mobile-bank.psbc.com
 DOMAIN,mobile-bank.psbc.com
 
+# ────────── 国内应用（2026-10-26 用户批准）──────────
+# 飞书内嵌文档走系统 WebKit 进程，进程白名单管不到，需按域名直连
+DOMAIN-SUFFIX,feishucdn.com
+# 字节国内服务
+DOMAIN-SUFFIX,doubao.com
+
 # ────────── 私网段 ──────────
 # ⚠️ 故意不加 no-resolve，请勿补上：
 # 公司内网有些主机名不在 dahaoshen.com 下，但会解析到 10.x 等私网地址，
