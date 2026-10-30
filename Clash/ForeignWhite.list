@@ -38,6 +38,8 @@ DOMAIN-SUFFIX,ooklaserver.net
 # ────────── 开发依赖与软件更新（2026-10-30 用户批准；大流量下载，和 AI 无关）──────────
 # 容器（docker.io、ghcr.io 见上）；docker.com 覆盖 production.cloudfront.docker.com
 DOMAIN-SUFFIX,docker.com
+# OrbStack 自身更新 CDN（2026-10-30 用户批准）
+DOMAIN-SUFFIX,orbstack.dev
 DOMAIN-SUFFIX,quay.io
 DOMAIN-SUFFIX,gcr.io
 # Java

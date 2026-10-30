@@ -28,6 +28,7 @@ DOMAIN,pba0.apple.com
 DOMAIN,publicassets.cdn-apple.com
 DOMAIN,ipcdn.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,iphonesubmissions.apple.com
 DOMAIN,cds.apple.com

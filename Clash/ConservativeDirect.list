@@ -26,6 +26,8 @@ DOMAIN,mobile-bank.psbc.com
 DOMAIN-SUFFIX,feishucdn.com
 # 字节国内服务
 DOMAIN-SUFFIX,doubao.com
+# 阿里 npm 国内镜像（2026-10-30 用户批准；registry 子域名不在国内列表）
+DOMAIN-SUFFIX,npmmirror.com
 
 # ────────── 私网段 ──────────
 # ⚠️ 故意不加 no-resolve，请勿补上：
