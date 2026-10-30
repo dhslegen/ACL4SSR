@@ -28,6 +28,9 @@ DOMAIN-SUFFIX,feishucdn.com
 DOMAIN-SUFFIX,doubao.com
 # 阿里 npm 国内镜像（2026-10-30 用户批准；registry 子域名不在国内列表）
 DOMAIN-SUFFIX,npmmirror.com
+# Bark 推送接口（2026-10-30 用户批准；只放这个主机，不用 day.app 后缀）
+# 家宽实测可直连（43.155.109.24，疑似腾讯云），15 次中超时 1 次；用户已知约一成推送可能延迟或丢失，仍选直连
+DOMAIN,api.day.app
 
 # ────────── 私网段 ──────────
 # ⚠️ 故意不加 no-resolve，请勿补上：
