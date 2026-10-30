@@ -21,6 +21,8 @@ DOMAIN-SUFFIX,typora.io
 DOMAIN-SUFFIX,istatmenus.app
 # Jump Desktop 远程中继长连接
 DOMAIN-SUFFIX,jumpdesktop.com
+# 住宅代理服务商控制台（2026-10-30 用户批准）
+DOMAIN-SUFFIX,decodo.com
 
 # ────────── DNS（本地覆写的 DoH 服务器，开了 follow-rule，避免 DNS 查询落到兜底）──────────
 IP-CIDR,1.1.1.1/32,no-resolve

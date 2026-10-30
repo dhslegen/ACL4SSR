@@ -20,6 +20,25 @@ DOMAIN,iosapps.itunes.apple.com
 # ────────── Apple 推送（apsd 常驻长连接，443 / 5223 端口）──────────
 DOMAIN-SUFFIX,push.apple.com
 
+# ────────── Apple 系统守护进程（2026-10-30 用户批准，来自 10-27 复盘）──────────
+# 刻意不放 ml.cdn-apple.com、swallow.apple.com（可能与 Apple Intelligence 相关），
+# 也不用 cdn-apple.com 后缀，避免把 ml.cdn-apple.com 一起放进来
+DOMAIN,pba.apple.com
+DOMAIN,pba0.apple.com
+DOMAIN,publicassets.cdn-apple.com
+DOMAIN,ipcdn.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN,iphonesubmissions.apple.com
+DOMAIN,cds.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN,smp-device-content.apple.com
+DOMAIN,configuration.apple.com
+DOMAIN,pancake.apple.com
+DOMAIN,xp.apple.com
+DOMAIN,identity.ess.apple.com
+DOMAIN,init-p01md.apple.com
+
 # ────────── iCloud 同步 ──────────
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
