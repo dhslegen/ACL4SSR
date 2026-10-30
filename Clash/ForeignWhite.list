@@ -25,3 +25,45 @@ DOMAIN-SUFFIX,jumpdesktop.com
 # ────────── DNS（本地覆写的 DoH 服务器，开了 follow-rule，避免 DNS 查询落到兜底）──────────
 IP-CIDR,1.1.1.1/32,no-resolve
 IP-CIDR,1.0.0.1/32,no-resolve
+
+# ────────── 测速（2026-10-30 用户批准；走住宅测出来的不是节点本身）──────────
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN-SUFFIX,speedtest.net
+DOMAIN-SUFFIX,ooklaserver.net
+
+# ────────── 开发依赖与软件更新（2026-10-30 用户批准；大流量下载，和 AI 无关）──────────
+# 容器（docker.io、ghcr.io 见上）；docker.com 覆盖 production.cloudfront.docker.com
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,gcr.io
+# Java
+DOMAIN-SUFFIX,maven.apache.org
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,sonatype.com
+DOMAIN-SUFFIX,gradle.org
+DOMAIN-SUFFIX,gradle-dn.com
+# JS（npmjs.org 见上）
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,yarnpkg.com
+DOMAIN-SUFFIX,nodejs.org
+# Go
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,go.dev
+# Rust
+DOMAIN-SUFFIX,crates.io
+DOMAIN-SUFFIX,rust-lang.org
+# 苹果 / Ruby
+DOMAIN-SUFFIX,brew.sh
+DOMAIN-SUFFIX,cocoapods.org
+DOMAIN-SUFFIX,rubygems.org
+# Python（pypi.org、pythonhosted.org 见上）
+DOMAIN-SUFFIX,anaconda.org
+DOMAIN-SUFFIX,anaconda.com
+# IDE（JetBrains AI 用 jetbrains.ai、grazie.ai，已在 AI 规则中先命中）
+DOMAIN-SUFFIX,jetbrains.com
+# 软件更新
+DOMAIN-SUFFIX,releases.stash.ws
+DOMAIN-SUFFIX,mimestream.com
+DOMAIN-SUFFIX,gvt1.com
