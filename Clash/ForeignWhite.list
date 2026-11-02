@@ -68,6 +68,23 @@ DOMAIN-SUFFIX,anaconda.com
 # IDE（JetBrains AI 用 jetbrains.ai、grazie.ai，已在 AI 规则中先命中）
 DOMAIN-SUFFIX,jetbrains.com
 # 软件更新
-DOMAIN-SUFFIX,releases.stash.ws
 DOMAIN-SUFFIX,mimestream.com
 DOMAIN-SUFFIX,gvt1.com
+
+# ────────── 11-02 兜底合并复盘（2026-11-02 用户批准）──────────
+# 软件更新与下载
+DOMAIN,release.gitkraken.dev
+DOMAIN,release.files.ghostty.org
+DOMAIN,pkgs.tailscale.com
+DOMAIN,swiftbar.github.io
+# 证书吊销检查
+DOMAIN,ocsp.digicert.com
+# Stash 官网、文档与机场订阅主机（Stash 用它查流量用量）
+DOMAIN-SUFFIX,stash.wiki
+DOMAIN-SUFFIX,stash.ws
+DOMAIN,ratchada.terminal69.win
+# 微软账号登录：走住宅时 Decodo 对 login.microsoftonline.com 返回 403，Tailscale 的微软账号授权失败
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msftauth.net
+DOMAIN,login.live.com

@@ -1,49 +1,42 @@
-# 系统服务列表（保守分流 Conservative.ini 使用）
-# 只放 Apple、Microsoft 官方更新与同步域名；bing、copilot、Siri 等和 AI 沾边的一律不放
+# 系统服务列表（保守分流 Conservative.ini 使用，排在 AI 规则之后）
+# Apple：用户 2026-11-02 定，苹果服务是本机运行的基础，经苹果的流量都算安全，整体放行（含苹果自家 AI）
+# Microsoft：只放官方更新与 Office 下载；bing、copilot 等和 AI 沾边的一律不放
 
-# ────────── Apple 系统与 App 更新 ──────────
-DOMAIN,swcdn.apple.com
-DOMAIN,swscan.apple.com
-DOMAIN,swdist.apple.com
-DOMAIN,mesu.apple.com
-DOMAIN,gdmf.apple.com
-# 系统资源目录（mobileassetd，2026-10-25 复盘批准）
-DOMAIN,gdmf-ados.apple.com
-# 证书吊销检查（trustd，2026-10-25 复盘批准）
-DOMAIN,ocsp2.apple.com
-DOMAIN,appldnld.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,oscdn.apple.com
-DOMAIN,osxapps.itunes.apple.com
-DOMAIN,iosapps.itunes.apple.com
-
-# ────────── Apple 推送（apsd 常驻长连接，443 / 5223 端口）──────────
-DOMAIN-SUFFIX,push.apple.com
-
-# ────────── Apple 系统守护进程（2026-10-30 用户批准，来自 10-27 复盘）──────────
-# 刻意不放 ml.cdn-apple.com、swallow.apple.com（可能与 Apple Intelligence 相关），
-# 也不用 cdn-apple.com 后缀，避免把 ml.cdn-apple.com 一起放进来
-DOMAIN,pba.apple.com
-DOMAIN,pba0.apple.com
-DOMAIN,publicassets.cdn-apple.com
-DOMAIN,ipcdn.apple.com
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,ls.apple.com
-DOMAIN,iphonesubmissions.apple.com
-DOMAIN,cds.apple.com
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN,smp-device-content.apple.com
-DOMAIN,configuration.apple.com
-DOMAIN,pancake.apple.com
-DOMAIN,xp.apple.com
-DOMAIN,identity.ess.apple.com
-DOMAIN,init-p01md.apple.com
-
-# ────────── iCloud 同步 ──────────
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
+# ────────── Apple（复制自上游 ACL4SSR Clash/Apple.list 2023-07-04 版并筛选）──────────
+# 不直接引用上游，防止上游以后把非苹果条目带进直连；已去掉三条非苹果条目：
+#   akadns.net（Akamai 通用 DNS）、crashlytics.com（Google Firebase，AI App 也会用）、apple.comscoreresearch.com（第三方统计）
+# apple.com 后缀已覆盖 push、itunes、apps、ls、swcdn、mesu、time.asia 等全部子域名，原先逐条添加的条目已合并
+DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mzstatic.com
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,144.178.36.0/22,no-resolve
+IP-CIDR,144.178.48.0/20,no-resolve
+IP-CIDR,192.35.50.0/24,no-resolve
+IP-CIDR,198.183.17.0/24,no-resolve
+IP-CIDR,205.180.175.0/24,no-resolve
+
+# ────────── Apple 隐私中继（2026-11-02 用户批准）──────────
+# 只放这两台主机，不放 cloudflare.com / fastly-edge.com 后缀（challenges.cloudflare.com 属于 AI 规则）
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
 
 # ────────── Microsoft 系统与 Office 更新 ──────────
 DOMAIN-SUFFIX,windowsupdate.com
