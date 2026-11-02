@@ -75,7 +75,6 @@ DOMAIN-SUFFIX,gvt1.com
 # 软件更新与下载
 DOMAIN,release.gitkraken.dev
 DOMAIN,release.files.ghostty.org
-DOMAIN,pkgs.tailscale.com
 DOMAIN,swiftbar.github.io
 # 证书吊销检查
 DOMAIN,ocsp.digicert.com
@@ -84,7 +83,13 @@ DOMAIN-SUFFIX,stash.wiki
 DOMAIN-SUFFIX,stash.ws
 DOMAIN,ratchada.terminal69.win
 # 微软账号登录：走住宅时 Decodo 对 login.microsoftonline.com 返回 403，Tailscale 的微软账号授权失败
+# 用户 11-02 定「彻底放开 Tailscale 和微软登录」：登录链路要整段走同一出口，否则报 user is not logged in
+# 不放 microsoft.com 后缀：copilot.microsoft.com 等归 AI 组
 DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,msftauth.net
-DOMAIN,login.live.com
+DOMAIN-SUFFIX,live.com
+DOMAIN,login.microsoft.com
+# Tailscale 控制台、登录与安装包（tailscale.com 已覆盖原 pkgs.tailscale.com）
+DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,tailscale.io
