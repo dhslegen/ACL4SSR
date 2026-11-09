@@ -93,3 +93,22 @@ DOMAIN,login.microsoft.com
 # Tailscale 控制台、登录与安装包（tailscale.com 已覆盖原 pkgs.tailscale.com）
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,tailscale.io
+
+# ────────── 11-02 至 11-08 兜底合并复盘（2026-11-09 用户批准）──────────
+# 做视频、发版时的一次性下载
+DOMAIN-SUFFIX,remotion.media
+DOMAIN-SUFFIX,iina.io
+# 苹果公证上传：只放这一台 S3 加速主机，不放 amazonaws.com 后缀
+DOMAIN,notary-submissions-prod.s3-accelerate.amazonaws.com
+# GitHub Actions 结果存储：只放这一台，blob.core.windows.net 是整个 Azure 对象存储
+DOMAIN,productionresultssa10.blob.core.windows.net
+# 开放授权素材库
+DOMAIN-SUFFIX,jamendo.com
+DOMAIN-SUFFIX,freesound.org
+DOMAIN-SUFFIX,openverse.org
+# 容器装系统用的 Linux 发行版镜像（按域名，不按 OrbStack 进程）
+DOMAIN-SUFFIX,mirrors.ctrliq.cloud
+DOMAIN,mirrors.gigenet.com
+DOMAIN,mirrors.rit.edu
+DOMAIN,mirror.web-ster.com
+DOMAIN,dl-cdn.alpinelinux.org

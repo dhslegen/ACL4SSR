@@ -33,6 +33,8 @@ DOMAIN-SUFFIX,npmmirror.com
 DOMAIN,api.day.app
 # 国内流程图服务（2026-11-02 用户批准）
 DOMAIN-SUFFIX,processon.com
+# 联软科技官网与下载站（国内企业终端准入软件，2026-11-09 用户批准）
+DOMAIN-SUFFIX,leagsoft.com
 
 # ────────── 私网段 ──────────
 # ⚠️ 故意不加 no-resolve，请勿补上：

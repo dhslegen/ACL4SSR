@@ -37,6 +37,8 @@ IP-CIDR,205.180.175.0/24,no-resolve
 # 只放这两台主机，不放 cloudflare.com / fastly-edge.com 后缀（challenges.cloudflare.com 属于 AI 规则）
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
+# Safari 安全浏览经 Fastly 的隐私中继（2026-11-09 用户批准，同样只放这一台）
+DOMAIN,ohttp-relay1.fastly-edge.com
 
 # ────────── Microsoft 系统与 Office 更新 ──────────
 DOMAIN-SUFFIX,windowsupdate.com
