@@ -112,3 +112,5 @@ DOMAIN,mirrors.gigenet.com
 DOMAIN,mirrors.rit.edu
 DOMAIN,mirror.web-ster.com
 DOMAIN,dl-cdn.alpinelinux.org
+# OpenStreetMap 官方地图瓦片（国内 DNS 被污染，直连不通；2026-11-14 用户批准）
+DOMAIN-SUFFIX,tile.openstreetmap.org
