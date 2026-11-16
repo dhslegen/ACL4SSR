@@ -1,0 +1,30 @@
+# 直连不通列表（保守分流 Conservative.ini 使用，对应「🚧 直连不通」组）
+# 在部分网络环境下直连不通、在家直连能通的国内站点；组内可切直连或节点，Stash 按设备记住选择
+# 以后同类站点都加在这里（2026-11-16 用户定）
+
+# ────────── 小红书 ──────────
+DOMAIN-SUFFIX,xiaohongshu.com
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,xhslink.com
+
+# ────────── 哔哩哔哩（取自上游 Ruleset/Bilibili.list，去掉腾讯通用 CDN smtcdns.net）──────────
+DOMAIN-KEYWORD,bilibili
+DOMAIN,apiintl.biliapi.net
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,acg.tv
+DOMAIN-SUFFIX,acgvideo.com
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,bigfun.cn
+DOMAIN-SUFFIX,bigfunapp.cn
+DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,biligame.com
+DOMAIN-SUFFIX,biligame.net
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN-SUFFIX,bilivideo.cn
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,im9.com
