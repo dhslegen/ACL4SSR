@@ -8,7 +8,7 @@ DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,xhslink.com
 
 # ────────── 哔哩哔哩（取自上游 Ruleset/Bilibili.list，去掉腾讯通用 CDN smtcdns.net）──────────
-DOMAIN-KEYWORD,bilibili
+# 2026-11-20 去掉 DOMAIN-KEYWORD,bilibili，补 bilibili.cn（流量库里 passport/pay/mall/api-vc.bilibili.cn 原先靠关键词命中）
 DOMAIN,apiintl.biliapi.net
 DOMAIN,upos-hz-mirrorakam.akamaized.net
 DOMAIN-SUFFIX,acg.tv
@@ -19,6 +19,7 @@ DOMAIN-SUFFIX,bigfunapp.cn
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biligame.com
